@@ -114,7 +114,7 @@ def telegram_polling():
                         send_message(chat_id, f"رقم المحادثة (Chat ID): {chat_id}")
                     elif text.startswith("/link"):
                         if PUBLIC_URL:
-                            send_message(chat_id, "هذا رابط صفحة المقلب:\\n" + PUBLIC_URL)
+                            send_message(chat_id, "هذا رابط صفحة المقلب:\n" + PUBLIC_URL.strip().rstrip("/"))
                         else:
                             send_message(chat_id, "لم يتم ضبط PUBLIC_URL بعد. أضفه في إعدادات الاستضافة.")
                     else:
